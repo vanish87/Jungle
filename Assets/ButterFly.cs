@@ -25,7 +25,7 @@ public class ButterFly : MonoBehaviour {
 		
 		//Vector3 new_pos = new Vector3(pos, pos, 3);
 		
-		Vector3 butterfly_pos = transform.localPosition;
+		Vector3 butterfly_pos = transform.position;
 		//if(Time.frameCount % 3 ==0 )
 		{
 			if(butterfly_pos.x > max_range_.x || butterfly_pos.x < min_range_.x || Random.value < 0.003f)
