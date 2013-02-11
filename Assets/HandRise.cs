@@ -25,7 +25,11 @@ public class HandRise : MonoBehaviour {
 		net_ = GameObject.Find("net_");
 		net_.renderer.enabled = false;
 		catcher_ = GameObject.Find("catcher_");
-		catcher_.renderer.enabled = false;		
+		Renderer[] allChildren = catcher_.GetComponentsInChildren<Renderer>();
+		foreach (Renderer child in allChildren) 
+		{
+   				 child.enabled = false;	
+		}	
 
 		//bias = new Vector3(0.0f ,0.0f, 0.0f);
 	}
@@ -52,7 +56,11 @@ public class HandRise : MonoBehaviour {
 		{
 			//Debug.Log(angle+"hand raise");
 			//focusPoint = hand_pos_;
-			catcher_.renderer.enabled = true;
+			Renderer[] allChildren = catcher_.GetComponentsInChildren<Renderer>();
+			foreach (Renderer child in allChildren) 
+			{
+   				child.enabled = true;	
+			}
 			net_.renderer.enabled = true;
 			track_hand_ = true;
 		}
