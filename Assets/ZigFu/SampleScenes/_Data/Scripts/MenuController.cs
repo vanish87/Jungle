@@ -69,7 +69,7 @@ public class MenuController : MonoBehaviour {
     public GameObject[] HideDuringSession;
     void Session_Start()
     {
-        //Debug.Log("Session Start from MenuController");
+        Debug.Log("Session Start from MenuController");
         foreach (GameObject go in ShowDuringSession)
         {
             go.SetActiveRecursively(true);
@@ -81,7 +81,7 @@ public class MenuController : MonoBehaviour {
     }
     void Session_End()
     {
-        //Debug.Log("Session End from MenuController");
+        Debug.Log("Session End from MenuController");
         foreach (GameObject go in ShowDuringSession)
         {
             go.SetActiveRecursively(false);

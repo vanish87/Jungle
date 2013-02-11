@@ -66,7 +66,7 @@ public class ZigHandSessionDetector : MonoBehaviour {
         leftHandDetector.transform.parent = gameObject.transform;
         ZigMapJointToSession leftMap = leftHandDetector.AddComponent<ZigMapJointToSession>();
         leftMap.joint = ZigJointId.LeftHand;
-
+		
         rightHandDetector = new GameObject("RightHandDetector");
         rightHandDetector.transform.parent = gameObject.transform;
         ZigMapJointToSession rightMap = rightHandDetector.AddComponent<ZigMapJointToSession>();
@@ -85,6 +85,7 @@ public class ZigHandSessionDetector : MonoBehaviour {
         }
 
         if (StartOnWave) {
+			
             ZigWaveDetector waveLeft = leftHandDetector.AddComponent<ZigWaveDetector>();
             waveLeft.Wave += delegate(object sender, EventArgs ea) {
                 Debug.Log("Wave from left");
