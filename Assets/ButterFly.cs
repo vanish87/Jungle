@@ -40,7 +40,7 @@ public class ButterFly : MonoBehaviour {
 			{
 				speed_range_y = -speed_range_y;
 				butterfly_pos.y += speed_range_y;
-				Debug.Log ("here");
+				//Debug.Log ("here");
 			}
 			speed = Random.value * speed_range_y;
 			if(Random.value < 0.01f)
