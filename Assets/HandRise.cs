@@ -47,7 +47,7 @@ public class HandRise : MonoBehaviour {
         ZigInputJoint head = user.Skeleton[(int)ZigJointId.Head];
 		ZigInputJoint elbow = user.Skeleton[(int)ZigJointId.LeftElbow];
 		ZigInputJoint hand = user.Skeleton[(int)ZigJointId.LeftHand];
-
+		
         Vector3 armDirection = (hand.Position - elbow.Position).normalized;
         Vector3 torsoDirection = (head.Position - torso.Position).normalized;
         double angle = Math.Acos(Vector3.Dot(armDirection, torsoDirection)) * 180 / Math.PI;
@@ -77,7 +77,14 @@ public class HandRise : MonoBehaviour {
 			//hand_pos_.y /= 200.0f;
 			//hand_pos_.z /= 500.0f;
 			//transform.localPosition = hand_pos_;
+			Quaternion rot = hand.Rotation;
+			//rot.y = -rot.y;
+			//rot.z = -rot.z;
 			this.transform.localPosition = Vector3.Lerp(this.transform.localPosition,  desiredPos, damping * Time.deltaTime);
+			
+			if(hand.GoodRotation)
+				this.transform.localRotation =  rot;;
+				//this.transform.Rotate(Vector3.forward);
 			//Debug.Log("catcher pos " + transform.position.x + " "+ transform.position.y + " " + transform.position.z );
 		}
 	}

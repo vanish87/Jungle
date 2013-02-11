@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ButterFly.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HandRise.cs">
     <Files>
-      <File FileName="Assets\ButterFly.cs" Line="43" Column="7" />
-      <File FileName="Assets\HandRise.cs" Line="80" Column="83" />
+      <File FileName="Assets\HandRise.cs" Line="81" Column="21" />
+      <File FileName="Assets\ButterFly.cs" Line="45" Column="41" />
       <File FileName="e:\13Spring\Game Studio\Jungle\Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" Line="22" Column="29" />
       <File FileName="Assets\ZigFu\Scripts\Zig.cs" Line="45" Column="10" />
       <File FileName="Assets\ZigFu\Scripts\UISessionControls\ZigFollowHandPoint.cs" Line="1" Column="19" />
@@ -18,12 +18,23 @@
       <File FileName="Assets\ZigFu\Scripts\UISessionControls\ZigSwipeDetector.cs" Line="1" Column="1" />
       <File FileName="Assets\ZigFu\Scripts\UserEngagers\ZigEngageAllUsers.cs" Line="1" Column="1" />
       <File FileName="Assets\ZigFu\Scripts\UISessionControls\ZigFader.cs" Line="1" Column="1" />
-      <File FileName="Assets\ZigFu\Scripts\UserControls\ZigSkeleton.cs" Line="206" Column="46" />
+      <File FileName="Assets\ZigFu\Scripts\UserControls\ZigSkeleton.cs" Line="186" Column="48" />
       <File FileName="Assets\ZigFu\SampleScenes\_Data\Scripts\RandomHSV.cs" Line="15" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True" />
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="ZigFu" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="UserControls" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="HandRise.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
