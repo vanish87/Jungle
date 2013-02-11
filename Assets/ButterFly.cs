@@ -7,40 +7,46 @@ public class ButterFly : MonoBehaviour {
 	const int range_ = 4;
 	Vector3 max_range_, min_range_;
 	const int bound = 12;
-	float speed = 0.05f;
-	float speed_range = 0.3f;
-	float speed_range_y = 0.5f;
+	float speed = 0.15f;
+	float speed_range = 0.2f;
+	float speed_range_y = 0.4f;
 	bool catched = false;
 	float damping =20;
 	GameObject catcher_;
 	// Use this for initialization
 	void Start () {
 		//Random.seed((int)Time.deltaTime);
-		max_range_ = new Vector3(bound, bound - 8, 1);
-		min_range_ = new Vector3(-bound, 2, 1);
+		max_range_ = new Vector3(bound, bound - 5, 1);
+		min_range_ = new Vector3(-bound, -2, 1);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 		//Vector3 new_pos = new Vector3(pos, pos, 3);
+		
 		Vector3 butterfly_pos = transform.localPosition;
-		if(butterfly_pos.x > max_range_.x || butterfly_pos.x < min_range_.x || Random.value < 0.05f)
+		//if(Time.frameCount % 3 ==0 )
 		{
-			speed_range = -speed_range;
-		}			
-		speed = Random.value * speed_range;
-		butterfly_pos.x += speed;
-		
-		
-		if(butterfly_pos.y > max_range_.y || butterfly_pos.y< min_range_.y)
-		{
-			speed_range_y = -speed_range_y;
+			if(butterfly_pos.x > max_range_.x || butterfly_pos.x < min_range_.x || Random.value < 0.003f)
+			{
+				speed_range = -speed_range;
+			}			
+			speed = Random.value * speed_range;
+			butterfly_pos.x += speed;
+			
+			
+			if(butterfly_pos.y > max_range_.y || butterfly_pos.y< min_range_.y|| Random.value < 0.005f)
+			{
+				speed_range_y = -speed_range_y;
+				butterfly_pos.y += speed_range_y;
+				Debug.Log ("here");
+			}
+			speed = Random.value * speed_range_y;
+			if(Random.value < 0.01f)
+				speed = Random.value * speed_range_y * range_;
+			butterfly_pos.y += speed;
 		}
-		speed = Random.value * speed_range_y;
-		if(Random.value < 0.01f)
-			speed = Random.value * speed_range_y * range_;
-		butterfly_pos.y += speed;
 		if(catched)
 		{
 			transform.localPosition = catcher_.transform.localPosition;			
